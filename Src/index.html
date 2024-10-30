@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Usuários</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Cadastro de Usuários</h1>
+  </header>
+
+  <main class="container">
+    <nav class="tabs">
+      <button id="cadastroTab" class="active">Cadastro</button>
+      <button id="usuariosTab">Usuários</button>
+    </nav>
+
+    <section id="cadastroSection">
+      <form id="form" aria-labelledby="cadastroTab">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" placeholder="Nome" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Email" required>
+        
+        <button type="submit">Cadastrar</button>
+      </form>
+    </section>
+
+    <section id="usuariosSection" aria-labelledby="usuariosTab" style="display: none;">
+      <header>
+        <h2>Lista de Usuários</h2>
+      </header>
+      <aside>
+        <p>Total de Usuários: <span id="totalUsuarios">0</span></p>
+      </aside>
+      <ul id="userList" aria-live="polite"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Cadastro de Usuários</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
